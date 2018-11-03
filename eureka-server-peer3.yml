@@ -1,15 +1,15 @@
 server:
-  port: 1111
+  port: 1113
 
 eureka:
   #region: us-east-1
   instance:
-    hostname: dev-peer1.dobooking.cn
+    hostname: 127.0.0.1
   client:
     registerWithEureka: true
     fetchRegistry: true
     serviceUrl:
-        defaultZone: http://dev-peer2.dobooking.cn:1112/eureka/,http://dev-peer3.dobooking.cn:1113/eureka/
+        defaultZone: http://127.0.0.1:1112/eureka/,http://127.0.0.1:1111/eureka/
         #default: http://localhost:8761/eureka/
   server:
     enableSelfPreservation: true
